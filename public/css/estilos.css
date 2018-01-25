@@ -1,0 +1,30 @@
+.frase{
+  font-size: 20px;
+  text-align: left;
+}
+.campoDeDigitacao{
+  font-size: 20px;
+  height: 150px;
+}
+.campoDisabled{
+  background-color:#a02b2b;
+}
+.icones{
+  vertical-align: middle;
+}
+.msg{
+  font-size: 22px;
+}
+.msgDisabled{
+  color:#a02b2b;
+}
+
+.bordaVerde{
+  border: 3px solid #59a053;
+}
+.bordaVermelha{
+  border: 3px solid #a02b2b;
+}
+.bordaPreta{
+  border: 3px solid #262222;
+}
