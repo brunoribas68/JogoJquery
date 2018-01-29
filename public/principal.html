@@ -18,19 +18,34 @@
       </li>
       <li>
          <i class="small material-icons icones">query_builder</i>
-        <span id="tempoDigitacao">15</span> segundos
+        <span id="tempoDigitacao">3</span> segundos
       </li>
     </ul>
     <div class="msg center">Inicie o Jogo</div>
     <textarea class="campoDeDigitacao bordaPreta" id="" cols="30" rows="10"></textarea>
     <a class="btn-floating btn-large waves-effect waves-light red reset"><i class="material-icons">restore</i></a>
+    <a class="btn-floating btn-large waves-effect waves-light grenn mostraPlacar"><i class="material-icons">assignment</i></a>
     <ul class="center">
       <li><span class="contadorDeCaracteres">0</span> caracteres</li>
       <li><span class="contadorDePalavras">0</span> palavras</li>
     </ul>
   </div>
-
+  <section class="placar">
+    <h3 class="center">Placar</h3>
+    <table class="centered bordered">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>No. de Palavras</th>
+          <th>Remover</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </section>
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/placar.js"></script>
 </body>
 </html>

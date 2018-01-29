@@ -3,13 +3,13 @@
   var mensagemInicial = $(".msg").text();
   var mensagem = $(".msg");
   var frase = $(".frase").text();
-  console.log(frase);
 
 
   $("document").ready(function(){
     InicializaFrase();
     InicializaContadores();
     InicializaCronometro();
+
     $('.reset').click(reiniciaJogo);
   });
 
@@ -40,15 +40,20 @@
         tempoDigitacao--;
         $("#tempoDigitacao").text(tempoDigitacao);
         if(tempoDigitacao == 0){
-          campo.attr("disabled",true);
           clearInterval(idInterval);
-          campo.toggleClass("campoDisabled");
-          mensagem.addClass("msgDisabled");
-          mensagem.text("GAME OVER");
-          campo.addClass("bordaVermelha");
+          finalizaJogo();
         }
       },1000);
     });
+  }
+
+  function finalizaJogo(){
+    campo.toggleClass("campoDisabled");
+    mensagem.addClass("msgDisabled");
+    mensagem.text("GAME OVER");
+    campo.addClass("bordaVermelha");
+    campo.attr("disabled",true);
+    inserePlacar();
   }
 
   function reiniciaJogo(){
@@ -70,8 +75,6 @@
     campo.removeClass("bordaPreta");
     var digitado = campo.val();
     var comparavel = frase.substr(0,digitado.length)
-    console.log("Digitado: " + digitado);
-    console.log("Comparavel :" + comparavel);
     if(digitado == comparavel){
     campo.addClass("bordaVerde");
     campo.removeClass("bordaVermelha");

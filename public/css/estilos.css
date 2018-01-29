@@ -28,3 +28,6 @@
 .bordaPreta{
   border: 3px solid #262222;
 }
+body{
+  overflow: scroll;
+}
